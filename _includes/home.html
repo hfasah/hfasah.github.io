@@ -4,6 +4,23 @@
     {% include meta.html post=post preview=true %}
     {{ post.excerpt }}
     <div class="more"><a href="{{ post.url | relative_url }}">read more</a></div>
+
+    <div class="post-preview">
+        <h1> <a href="/posts/airflow-taskflow/">Writing Pythonic Airflow DAGs with TaskFlow API </a></h1>
+        <div class="post-content">
+            <p> {{ post.excerpt }}</p>
+        </div>
+        <div class="post-meta text-muted d-flex justify-content-between">
+            <div> <i class="far fa-calendar fa-fw"></i> 
+                <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Sun, Jul 31, 2022, 7:00 PM +0100">
+                  Jul 31, 2022<i class="unloaded">2022-07-31T19:00:00+01:00</i>
+                </span> <i class="far fa-clock fa-fw"></i> 
+                <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="542 words">3 min</span>
+            </div>
+        </div>
+    </div>
+
+    
   </article>
 {% endfor %}
 
