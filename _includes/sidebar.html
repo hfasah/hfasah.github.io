@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="{{ "/assets/css/sidebar.css" | relative_url }}" media="screen and (min-width: 70em)">
-<div class="profile-wrapper text-center">
+
+<aside style="display: none">
+  <div class="profile-wrapper text-center">
       <div id="avatar"> 
           <a href="/" alt="avatar" class="mx-auto"> 
               <img src="https://avatars.githubusercontent.com/u/7165735?s=460&amp;u=7ca34b8152bbff087bfc860cc87a4c35b4f9cb1b&amp;v=4" alt="avatar" onerror="this.style.display='none'"> </a>
@@ -7,8 +9,8 @@
       <div class="site-title mt-3"> 
             <a href="/">Hafasah Hippolyte</a>
       </div>
-      <div class="site-subtitle font-italic">Cloud Engineering, Linux Administration, AI and machine learning, and Coding</div></div>
-<aside style="display: none">
+      <div class="site-subtitle font-italic">Cloud Engineering, Linux Administration, AI and machine learning, and Coding</div>
+ </div>    
   <nav>
   {%- for item in site.navigation -%}
     {%- assign node = site.pages | where: "name", item.file | first -%}
