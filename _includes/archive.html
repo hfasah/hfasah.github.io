@@ -4,7 +4,7 @@
        <div class="post-preview">
           <h1> <a href="/posts/airflow-taskflow/">{{ post.title }} </a></h1>
           <div class="post-content">
-              <p> {{ post.excerpt }}</p>
+              <p> {{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}</p>
           </div>
           <div class="post-meta text-muted d-flex justify-content-between">
               <div> <i class="far fa-calendar fa-fw"></i> 
