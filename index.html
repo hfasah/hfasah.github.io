@@ -4,8 +4,6 @@ title: "Home"
 ---
 {% include sidebar.html %}
 {% include topbar.html %}
-{% if site.show_excerpts %}
-  {% include home.html %}
-{% else %}
-  {% include archive.html title="Posts" %}
-{% endif %}
+{% include home.html %}
+{% include secondary-sidebar.html %}
+{% include footer.html %}
