@@ -1,5 +1,5 @@
 {%- assign posts = paginator.posts | default: site.posts -%}
-{% for post in posts %}
+
 <article>
     <div class="main-content">
       {% for post in site.posts %}
@@ -23,7 +23,7 @@
     </div> 
    
   </article>
-{% endfor %}
+
 
 
 {% if paginator.total_pages > 1 %}
