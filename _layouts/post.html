@@ -4,8 +4,9 @@ layout: default
 
 {% include sidebar.html %}
 {% include topbar.html %}
-<div class="main-content"> 
+
   <article>
+    <div class="main-content"> 
     {% include meta.html post=page %}
     {{ content }}
     {% if page.comments != false and site.comments.isso or site.comments.disqus %}
@@ -14,6 +15,7 @@ layout: default
       {% if site.comments.disqus_shortname %}<div id="disqus_thread"></div>{% endif %}
       <noscript>Please enable JavaScript to view comments.</noscript>
     {% endif %}
+     </div>  
+    {% include secondary-sidebar.html %}
   </article>
-</div>  
-{% include secondary-sidebar.html %}
+ 
