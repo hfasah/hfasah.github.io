@@ -16,7 +16,7 @@ With Rancher, you can easily deploy a Kubernetes cluster with multiple control p
 Furthermore, you can use the VMware ESXi cluster to create both traditional virtual machines as well as Kubernetes virtual machines. The VMware ESXi cluster provides a virtualized infrastructure that allows you to create, manage, and run multiple virtual machines on the same physical hardware. This can include running Kubernetes virtual machines alongside traditional virtual machines, as long as the underlying hardware and resources are for workloads.
 Following is the proposed Hardware that will be used for the VMware ESXI cluster for further k8s deployment.
 
-<ol>
+<ul>
   <li>
     <span>a) Suggested Hardware for VMware cluster</span>
     <table class="c52"><tbody><tr class="c27"><td class="c38 c47" colspan="5" rowspan="1"><p class="c11"><span class="c10 c13">Vmware Esxi Cluster Hardware</span></p></td></tr><tr class="c20"><td class="c49" colspan="1" rowspan="1"><p class="c4"><span class="c1">&nbsp;</span></p></td><td class="c31 c53" colspan="2" rowspan="1"><p class="c11"><span class="c10 c7">Compute</span></p></td><td class="c31 c41" colspan="2" rowspan="1"><p class="c11"><span class="c7 c10">Storage/vSAN</span></p></td></tr><tr class="c22"><td class="c31 c49" colspan="1" rowspan="1"><p class="c4"><span class="c0">Physical host</span></p></td><td class="c45 c31" colspan="1" rowspan="1"><p class="c4"><span class="c0">RAM</span></p></td><td class="c15 c31" colspan="1" rowspan="1"><p class="c4"><span class="c0">Processor</span></p></td><td class="c8 c31" colspan="1" rowspan="1"><p class="c4"><span class="c0">OS SSD</span></p></td><td class="c25 c31" colspan="1" rowspan="1"><p class="c4"><span class="c0">Storage SSD/HDD</span></p></td></tr><tr class="c22"><td class="c19" colspan="1" rowspan="1"><p class="c4"><span class="c1">Server-1</span></p></td><td class="c45" colspan="1" rowspan="1"><p class="c4"><span class="c1">128 GB</span></p></td><td class="c15" colspan="1" rowspan="1"><p class="c4"><span class="c1">12 Cores/24 Threads </span></p></td><td class="c8" colspan="1" rowspan="1"><p class="c4"><span class="c1">256GB</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c4"><span class="c1">3x 4TB </span></p></td></tr><tr class="c22"><td class="c19" colspan="1" rowspan="1"><p class="c4"><span class="c1">Server-2</span></p></td><td class="c45" colspan="1" rowspan="1"><p class="c4"><span class="c1">128 GB</span></p></td><td class="c15" colspan="1" rowspan="1"><p class="c4"><span class="c1">12 Cores/24 Threads </span></p></td><td class="c8" colspan="1" rowspan="1"><p class="c4"><span class="c1">256GB</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c4"><span class="c1">3x 4TB </span></p></td></tr><tr class="c22"><td class="c19" colspan="1" rowspan="1"><p class="c4"><span class="c1">Server-3</span></p></td><td class="c45" colspan="1" rowspan="1"><p class="c4"><span class="c1">128 GB</span></p></td><td class="c15" colspan="1" rowspan="1"><p class="c4"><span class="c1">12 Cores/24 Threads </span></p></td><td class="c8" colspan="1" rowspan="1"><p class="c4"><span class="c1">256GB</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c4"><span class="c1">3x 4TB </span></p></td></tr></tbody></table>
@@ -41,14 +41,15 @@ The Kubernetes cluster also has two worker nodes and an optional worker node, ea
 </li>
 <li>
   <span>e) Installation Steps</span>
-  ##Install VMware ESXi on each of the three physical hosts.<br/>
-  ##Create a cluster in VMware vSphere Client by selecting all three ESXi hosts and creating a new cluster. This will allow you to manage the hosts together as a single entity.<br/>
-  ##Create two virtual switches in VMware vSphere Client: one for the Management Network and another for the Provider Network. Assign the Management Network to the physical NIC that is connected to the Management Network on each host and assign the Provider Network to the physical NIC that is connected to the Provider Network on each host.<br/>
-  ##Create a new VM on the ESXi cluster using the Rancher ISO image.<br/>
-  ##Install Rancher on the newly created VM and configure it for your environment. This will allow you to manage your Kubernetes cluster using the Rancher UI.<br/>
-  ##Deploy a Kubernetes cluster using Rancher by selecting the option to "Launch Kubernetes".<br/>
-  ##Create three Master nodes for the Kubernetes cluster with two NICs each: one for the Provider Network (192.168.0/24) and one for the Management Network (10.101.10.0/24).<br/>
-  ##Each Master node will be installed on physical server-1, Physical server-2, and Physical server-3.<br/>
-
+  <ol>
+      <li>Install VMware ESXi on each of the three physical hosts.</li>
+      <li>Create a cluster in VMware vSphere Client by selecting all three ESXi hosts and creating a new cluster. This will allow you to manage the hosts together as a single entity.</li>
+      <li>Create two virtual switches in VMware vSphere Client: one for the Management Network and another for the Provider Network. Assign the Management Network to the physical NIC that is connected to the Management Network on each host and assign the Provider Network to the physical NIC that is connected to the Provider Network on each host.</li>
+      <li>Create a new VM on the ESXi cluster using the Rancher ISO image.</li>
+      <li>Install Rancher on the newly created VM and configure it for your environment. This will allow you to manage your Kubernetes cluster using the Rancher UI.</li>
+      <li>Deploy a Kubernetes cluster using Rancher by selecting the option to "Launch Kubernetes".</li>
+      <li>Create three Master nodes for the Kubernetes cluster with two NICs each: one for the Provider Network (192.168.0/24) and one for the Management Network (10.101.10.0/24).</li>
+      <li>Each Master node will be installed on physical server-1, Physical server-2, and Physical server-3.</li>
+  </ol>
 </li>
-</ol>
+</ul>
