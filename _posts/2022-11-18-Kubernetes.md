@@ -4,7 +4,7 @@ layout: post
 ---
 
 Kubernetes is an open-source platform for automating the deployment, scaling, and management of containerized applications. It provides a unified way of deploying, scaling, and operating applications across different infrastructure environments, such as on-premises data centers, public clouds, etc.
-<img class="post-image" src="{{ '/assets/media/kubernetes-1.png' }}" alt="avatar" onerror="this.style.display='none'">
+<img class="post-image" src="{{ '/assets/media/kubernetes-1.jpg' }}" alt="avatar" onerror="this.style.display='none'">
 
 <h2>Proposed Solution</h2>
 I propose you k8s HA cluster using Rancher on the VMware cluster Platform.
